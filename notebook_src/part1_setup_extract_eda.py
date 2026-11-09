@@ -14,7 +14,7 @@
 # | M5: Website visuals & deployment | *(name)* | *(ID)* | website layout & deployment, RQ9–RQ10 |
 # | M6: Story & documentation | *(name)* | *(ID)* | 7, 12, 13, 14, RQ11–RQ12 |
 #
-# **Website:** `https://<your-service>.onrender.com` *(add after deployment)* · **Repository:** `https://github.com/<team>/<repo>` *(add)*
+# **Website:** `https://nyc-housing-street-safety-dun.vercel.app` · **Repository:** `https://github.com/BigM3za/nyc-housing-street-safety`
 #
 # **Our question in one sentence:** *New York City builds thousands of affordable homes every year. Are these homes being built next to the city's most dangerous streets?*
 #

@@ -6,7 +6,7 @@ German International University, Faculty of Informatics and Computer Science
 
 | | Link |
 |---|---|
-| Live website | `https://nyc-housing-street-safety-dun.vercel.app` |
+| Live website | [https://nyc-housing-street-safety-dun.vercel.app](https://nyc-housing-street-safety-dun.vercel.app) |
 | Notebook | [`Milestone1_Housing_x_StreetSafety.ipynb`](Milestone1_Housing_x_StreetSafety.ipynb) |
 | Housing dataset | [Affordable Housing Production by Building (HPD)](https://data.cityofnewyork.us/d/hg8x-zxpr), catalog H2 |
 | Transportation dataset | [Serious Injury Response, Tracking & Analysis Program, SIRTA (DOT)](https://data.cityofnewyork.us/d/xeqp-qz8h), catalog T4 |
@@ -81,7 +81,12 @@ Then open http://127.0.0.1:8050.
 - **Drill-through:** click a ZIP on the map, the scatter plot or the ranking (or search for it) to open its detail panel.
 - **Story tab:** the question, the findings, three recommendations and the limitations.
 
-## How to deploy on Render (free)
+## Deployment
+
+The website is deployed and live on **Vercel**:  
+🔗 **[https://nyc-housing-street-safety-dun.vercel.app](https://nyc-housing-street-safety-dun.vercel.app)**
+
+### How to deploy on Render (alternative)
 
 1. Push this repository to GitHub.
 2. Create a free account at [render.com](https://render.com) and connect your GitHub account.
