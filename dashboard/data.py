@@ -3,6 +3,8 @@
 The website never repeats the cleaning. It only reads data/clean/*.csv, filters the rows
 the user asked for, and aggregates them to the level each chart needs.
 """
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from pathlib import Path
 
