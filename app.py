@@ -16,8 +16,9 @@ from dashboard.data import BOROUGHS, YEARS, Filters
 from dashboard.search import describe, parse_search
 from dashboard.story import STORY_MARKDOWN
 
-app = Dash(__name__, title="Homes on Dangerous Streets? | NYC", suppress_callback_exceptions=True)
-server = app.server                               # gunicorn on Render uses this Flask server
+dash_app = Dash(__name__, title="Homes on Dangerous Streets? | NYC", suppress_callback_exceptions=True)
+server = dash_app.server                               # gunicorn on Render uses this Flask server
+app = server                                           # Vercel zero-config WSGI entrypoint (app:app)
 
 DEFAULT = Filters()
 CONSTRUCTION_OPTIONS = [{"label": "All affordable buildings", "value": "All"},
@@ -104,7 +105,7 @@ explore_tab = html.Div([
     html.Div([chart_card("income-graph"), chart_card("ranking-graph")], className="chart-grid"),
 ])
 
-app.layout = html.Div([
+dash_app.layout = html.Div([
     html.Header([
         html.Div([
             html.H1("Homes on Dangerous Streets?"),
@@ -131,7 +132,7 @@ app.layout = html.Div([
 # ---------------------------------------------------------------------------
 # 1. Generate Report: combine dropdowns + search words into the applied filters
 # ---------------------------------------------------------------------------
-@app.callback(
+@dash_app.callback(
     Output("applied-filters", "data"),
     Output("borough-dd", "value"), Output("year-slider", "value"), Output("construction-dd", "value"),
     Output("severity-dd", "value"), Output("street-dd", "value"), Output("search-box", "value"),
@@ -178,7 +179,7 @@ def summary_text(f):
 # ---------------------------------------------------------------------------
 # 2. Which ZIP is selected (drill-through): search, or a click on map / scatter / ranking
 # ---------------------------------------------------------------------------
-@app.callback(
+@dash_app.callback(
     Output("selected-zip", "data"),
     Input("applied-filters", "data"), Input("map-graph", "clickData"), Input("scatter-graph", "clickData"),
     Input("ranking-graph", "clickData"), Input("close-detail", "n_clicks"),
@@ -200,7 +201,7 @@ def select_zip(applied, map_click, scatter_click, ranking_click, _close):
 # ---------------------------------------------------------------------------
 # 3. Draw every chart and number from the applied filters
 # ---------------------------------------------------------------------------
-@app.callback(
+@dash_app.callback(
     Output("kpi-units", "children"), Output("kpi-buildings", "children"), Output("kpi-crashes", "children"),
     Output("kpi-deaths", "children"), Output("kpi-near", "children"), Output("kpi-hotspots", "children"),
     Output("scatter-graph", "figure"), Output("trend-graph", "figure"), Output("street-graph", "figure"),
@@ -221,12 +222,12 @@ def draw_report(applied):
             figures.ranking_figure(zips))
 
 
-@app.callback(Output("heatmap-graph", "figure"), Input("applied-filters", "data"), Input("heatmap-mode", "value"))
+@dash_app.callback(Output("heatmap-graph", "figure"), Input("applied-filters", "data"), Input("heatmap-mode", "value"))
 def draw_heatmap(applied, mode):
     return figures.heatmap_figure(data.filter_crashes(Filters.from_dict(applied)), mode)
 
 
-@app.callback(Output("map-graph", "figure"), Output("zip-detail", "children"),
+@dash_app.callback(Output("map-graph", "figure"), Output("zip-detail", "children"),
               Input("applied-filters", "data"), Input("selected-zip", "data"))
 def draw_map_and_detail(applied, selected_zip):
     f = Filters.from_dict(applied)
@@ -264,4 +265,4 @@ def zip_detail_panel(zip_code, f):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    dash_app.run(debug=True)
