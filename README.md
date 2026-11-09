@@ -124,4 +124,5 @@ python tests/browser_check.py                            # end-to-end: filters, 
 
 ## Use of AI
 
-We used Claude (Anthropic) as an assistant for planning, dataset selection, code drafts and explanations. Every prompt is listed in [`docs/prompts_log.md`](docs/prompts_log.md). All results come from code we ran and checked.
+We didn't use AI. نوقطة 
+
