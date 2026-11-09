@@ -50,9 +50,10 @@ assets/style.css                          website style (Dash loads it automatic
 reports/                                  automated EDA reports (ydata-profiling, Sweetviz)
 tests/                                    unit tests and an end-to-end browser test
 docs/prompts_log.md                       every AI prompt we used
-requirements.txt                          packages for the website (Render)
+requirements.txt                          packages for the website (local run and Render)
 requirements-notebook.txt                 packages for running the notebook locally
-render.yaml, .python-version              deployment settings for Render
+pyproject.toml, uv.lock, .python-version  packages and Python version for the Vercel deployment
+render.yaml                               settings for the alternative Render deployment
 ```
 
 ## How to run the notebook
@@ -82,19 +83,24 @@ Then open http://127.0.0.1:8050.
 - **Drill-through:** click a ZIP on the map, the scatter plot or the ranking (or search for it) to open its detail panel.
 - **Story tab:** the question, the findings, three recommendations and the limitations.
 
-## How to deploy on Render (free)
+## How to deploy on Vercel (free, what we used)
 
 1. Push this repository to GitHub.
-2. Create a free account at [render.com](https://render.com) and connect your GitHub account.
-3. Click **New + → Blueprint**, choose this repository, and confirm. Render reads `render.yaml` and creates the web service.
-   *(Alternative without Blueprint: **New + → Web Service**, choose the repository, Build Command `pip install -r requirements.txt`, Start Command `gunicorn app:server --workers 1 --threads 4 --timeout 120`, Instance type **Free**.)*
-4. Wait for the build to finish (a few minutes), then open the `onrender.com` link and test every filter, the search box and the Generate Report button.
-5. Put the link at the top of this README and in the submission email.
+2. Sign in to [vercel.com](https://vercel.com) with GitHub, click **Add New → Project**, and import this repository.
+3. Keep the default settings and click **Deploy**. Vercel finds `app.py`, installs the packages listed in `pyproject.toml` (locked in `uv.lock`) and runs `app`, the Flask server that Dash is built on (`app = server` in `app.py`), as a serverless function.
+4. Open the `vercel.app` link and test every filter, the search box and the Generate Report button.
+5. Every new commit on `main` is deployed again automatically.
 
 **Notes:**
-- `.python-version` pins Python 3.13, the version we tested. Without it, Render would use its newest default.
-- A free service goes to sleep after 15 minutes without visitors, and the first visit after that takes about a minute to load. Open the site once before showing it.
-- The website uses about 125 MB of memory because it reads the small clean tables, not the raw data.
+- `.python-version` and `pyproject.toml` pin Python 3.12.
+- The first visit after a quiet period takes a few seconds longer (cold start), because the function loads the clean tables again.
+- The website reads only the small clean tables (`data/clean/`), not the raw data, so it fits easily in a serverless function.
+
+### Alternative: Render (free)
+
+1. On [render.com](https://render.com), sign in with GitHub and click **New + → Blueprint**, choose this repository, and confirm. Render reads `render.yaml`.
+   *(Or **New + → Web Service**: Build Command `pip install -r requirements.txt`, Start Command `gunicorn app:server --workers 1 --threads 4 --timeout 120`, Instance type **Free**.)*
+2. A free Render service sleeps after 15 minutes without visitors; the next visit takes about a minute to load.
 
 ## Tests
 
@@ -112,8 +118,8 @@ python tests/browser_check.py                            # end-to-end: filters, 
 | M1: Lead & Integration | RQ1, RQ2 | Extract, integration, post-integration cleaning | Data loading (`dashboard/data.py`) | Repository structure |
 | M2: Housing data | RQ3, RQ4 | Housing EDA and cleaning | Housing filters | Housing markdown cells |
 | M3: Transport data | RQ5, RQ6 | Crash EDA, cleaning and ZIP imputation | Crash filters | Crash markdown cells |
-| M4: Website logic | RQ7, RQ8 | Load step | Callbacks, search parser, Generate Report button | Website section of this README |
-| M5: Website visuals & deployment | RQ9, RQ10 | Chart style and colours | Layout, charts, map, Render deployment | Deployment guide |
+| M4: Website logic | RQ7, RQ8 | Load step | Callbacks, search parser, Generate Report button | Website section of this README, GitHub upload |
+| M5: Website visuals & deployment | RQ9, RQ10 | Chart style and colours | Layout, charts, map, Vercel deployment | Deployment guide |
 | M6: Story & documentation | RQ11, RQ12 | Cleaning verification | Story tab | Story, README, prompts log, GitHub upload, final check |
 
 ## Use of AI

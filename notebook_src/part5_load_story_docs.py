@@ -99,8 +99,8 @@ for file_name, table in exports.items():
 # | M1: Lead & Integration | RQ1, RQ2 | Extract (2), integration (8), post-integration cleaning (9) | Data loading for the app | Repository structure |
 # | M2: Housing data | RQ3, RQ4 | Housing EDA (3), housing cleaning (5) | Housing filters | Housing markdown cells |
 # | M3: Transport data | RQ5, RQ6 | Crash EDA (4), crash cleaning and ZIP imputation (6) | Crash filters | Crash markdown cells |
-# | M4: Website logic | RQ7, RQ8 | Load step (11) | Callbacks, search parser, Generate Report button | Website section of README |
-# | M5: Website visuals & deployment | RQ9, RQ10 | Chart style and colours | Layout, charts, map, deployment on Render | Deployment guide |
+# | M4: Website logic | RQ7, RQ8 | Load step (11) | Callbacks, search parser, Generate Report button | Website section of README, GitHub upload |
+# | M5: Website visuals & deployment | RQ9, RQ10 | Chart style and colours | Layout, charts, map, deployment on Vercel | Deployment guide |
 # | M6: Story & documentation | RQ11, RQ12 | Cleaning verification (7) | Story tab | Story (12), README, prompts log (14), GitHub upload, final check |
 #
 # *Every member reviewed the full notebook and can explain each step.*
@@ -124,4 +124,4 @@ for file_name, table in exports.items():
 # | 11–19 | Oct–Nov 2026 | Asked how to run and test the notebook and website (in Colab, then locally on Windows); shared screenshots of results and errors | Running and testing the project; fixing a Colab upload error |
 # | 20–21 | Oct–Nov 2026 | Asked which role is easiest and how M6 should prepare for the evaluation | M6 role choice and evaluation preparation |
 # | 22–30 | 9 Nov 2026 | Asked what to submit; shared team names, IDs and roles; step-by-step help to create and fill the GitHub repository | Submission checklist, team tables, GitHub repository |
-# | 31–33 | 9 Nov 2026 | Asked for a final review of everything; shared the first (Vercel) deployment link | Final review; the Vercel link returned an error, so we deployed on Render |
+# | 31–34 | 9 Nov 2026 | Asked for a final review of everything; shared the Vercel website link twice | Final review: the first check found an error page; after the team fixed the Vercel setup, the second check passed |

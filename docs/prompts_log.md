@@ -41,7 +41,8 @@ Prompts are word for word. Only prompt 23 is shortened, because it was just a li
 | 30 | "??" | screenshot of the repository after the first upload | Uploading the folders that were missing |
 | 31 | "I want Claude Code to review everything after we finish can you make this possible" | none | Plan for a final review |
 | 32 | "I want you to review everything right now we finished and deployed it" | none | Final review of the repository, notebook and website |
-| 33 | "https://nyc-housing-street-safety-dun.vercel.app/ Here is the link" | none | The review found that this Vercel link returns an error (500), so we deployed on Render instead |
+| 33 | "https://nyc-housing-street-safety-dun.vercel.app/ Here is the link" | none | The review found that this Vercel link returned an error (500), so the team fixed the Vercel setup |
+| 34 | "https://nyc-housing-street-safety-dun.vercel.app/ Try again" | none | Second check of the live website: filters, search, Generate Report, ZIP panel and Reset all work |
 
 ## How the answers were checked
 

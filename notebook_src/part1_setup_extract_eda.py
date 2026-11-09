@@ -14,7 +14,7 @@
 # | M5: Website visuals & deployment | Eyad Nada | 16003427 | website layout & deployment, RQ9–RQ10 |
 # | M6: Story & documentation | Mazen Osama | 16007545 | 7, 12, 13, 14, RQ11–RQ12 |
 #
-# **Website:** __WEBSITE__ · **Repository:** https://github.com/BigM3za/nyc-housing-street-safety
+# **Website:** https://nyc-housing-street-safety-dun.vercel.app · **Repository:** https://github.com/BigM3za/nyc-housing-street-safety
 #
 # **Our question in one sentence:** *New York City builds thousands of affordable homes every year. Are these homes being built next to the city's most dangerous streets?*
 #
