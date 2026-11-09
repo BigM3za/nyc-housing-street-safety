@@ -6,7 +6,7 @@ German International University, Faculty of Informatics and Computer Science
 
 | | Link |
 |---|---|
-| Live website | `https://<your-service>.onrender.com` *(add after deployment)* |
+| Live website | `https://nyc-housing-street-safety-dun.vercel.app` |
 | Notebook | [`Milestone1_Housing_x_StreetSafety.ipynb`](Milestone1_Housing_x_StreetSafety.ipynb) |
 | Housing dataset | [Affordable Housing Production by Building (HPD)](https://data.cityofnewyork.us/d/hg8x-zxpr), catalog H2 |
 | Transportation dataset | [Serious Injury Response, Tracking & Analysis Program, SIRTA (DOT)](https://data.cityofnewyork.us/d/xeqp-qz8h), catalog T4 |
