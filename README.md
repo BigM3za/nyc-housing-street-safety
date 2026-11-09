@@ -6,7 +6,8 @@ German International University, Faculty of Informatics and Computer Science
 
 | | Link |
 |---|---|
-| Live website | [https://nyc-housing-street-safety-dun.vercel.app](https://nyc-housing-street-safety-dun.vercel.app) |
+| Live website | https://nyc-housing-street-safety-dun.vercel.app |
+| Repository | https://github.com/BigM3za/nyc-housing-street-safety |
 | Notebook | [`Milestone1_Housing_x_StreetSafety.ipynb`](Milestone1_Housing_x_StreetSafety.ipynb) |
 | Housing dataset | [Affordable Housing Production by Building (HPD)](https://data.cityofnewyork.us/d/hg8x-zxpr), catalog H2 |
 | Transportation dataset | [Serious Injury Response, Tracking & Analysis Program, SIRTA (DOT)](https://data.cityofnewyork.us/d/xeqp-qz8h), catalog T4 |
@@ -15,12 +16,12 @@ German International University, Faculty of Informatics and Computer Science
 
 | Role | Name | ID | GitHub |
 |---|---|---|---|
-| M1: Lead & Integration | | | |
-| M2: Housing data | | | |
-| M3: Transport data | | | |
-| M4: Website logic | | | |
-| M5: Website visuals & deployment | | | |
-| M6: Story & documentation | | | |
+| M1: Lead & Integration | Mohamed Reyad | 16010224 | [MidoReyad](https://github.com/MidoReyad) |
+| M2: Housing data | Ziad Mohamed | 16006210 | [ziadMohamed16006210](https://github.com/ziadMohamed16006210) |
+| M3: Transport data | Mohamed Said | 16009603 | [mohamedsayed16009603](https://github.com/mohamedsayed16009603) |
+| M4: Website logic | Mohamed Nasr | 16003436 | [MohamedAhmedNasr](https://github.com/MohamedAhmedNasr) |
+| M5: Website visuals & deployment | Eyad Nada | 16003427 | [EyadNada](https://github.com/EyadNada) |
+| M6: Story & documentation | Mazen Osama | 16007545 | [BigM3za](https://github.com/BigM3za) |
 
 ## The question and the answer in short
 
@@ -81,12 +82,7 @@ Then open http://127.0.0.1:8050.
 - **Drill-through:** click a ZIP on the map, the scatter plot or the ranking (or search for it) to open its detail panel.
 - **Story tab:** the question, the findings, three recommendations and the limitations.
 
-## Deployment
-
-The website is deployed and live on **Vercel**:  
-🔗 **[https://nyc-housing-street-safety-dun.vercel.app](https://nyc-housing-street-safety-dun.vercel.app)**
-
-### How to deploy on Render (alternative)
+## How to deploy on Render (free)
 
 1. Push this repository to GitHub.
 2. Create a free account at [render.com](https://render.com) and connect your GitHub account.
@@ -113,12 +109,12 @@ python tests/browser_check.py                            # end-to-end: filters, 
 
 | Member | Research questions | Cleaning & integration | Website | Documentation |
 |---|---|---|---|---|
-| M1: Lead & Integration | RQ1, RQ2 | Extract, integration, post-integration cleaning | Data loading (`dashboard/data.py`) | GitHub repository |
+| M1: Lead & Integration | RQ1, RQ2 | Extract, integration, post-integration cleaning | Data loading (`dashboard/data.py`) | Repository structure |
 | M2: Housing data | RQ3, RQ4 | Housing EDA and cleaning | Housing filters | Housing markdown cells |
 | M3: Transport data | RQ5, RQ6 | Crash EDA, cleaning and ZIP imputation | Crash filters | Crash markdown cells |
 | M4: Website logic | RQ7, RQ8 | Load step | Callbacks, search parser, Generate Report button | Website section of this README |
 | M5: Website visuals & deployment | RQ9, RQ10 | Chart style and colours | Layout, charts, map, Render deployment | Deployment guide |
-| M6: Story & documentation | RQ11, RQ12 | Cleaning verification | Story tab | Story, README, prompts log, final check |
+| M6: Story & documentation | RQ11, RQ12 | Cleaning verification | Story tab | Story, README, prompts log, GitHub upload, final check |
 
 ## Use of AI
 

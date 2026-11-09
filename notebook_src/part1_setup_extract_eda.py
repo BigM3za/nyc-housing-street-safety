@@ -7,14 +7,14 @@
 #
 # | Role | Member | ID | Main sections |
 # |---|---|---|---|
-# | M1: Lead & Integration | *(name)* | *(ID)* | 1, 2, 8, 9, RQ1–RQ2 |
-# | M2: Housing data | *(name)* | *(ID)* | 3, 5, RQ3–RQ4 |
-# | M3: Transport data | *(name)* | *(ID)* | 4, 6, RQ5–RQ6 |
-# | M4: Website logic | *(name)* | *(ID)* | 11, website callbacks, RQ7–RQ8 |
-# | M5: Website visuals & deployment | *(name)* | *(ID)* | website layout & deployment, RQ9–RQ10 |
-# | M6: Story & documentation | *(name)* | *(ID)* | 7, 12, 13, 14, RQ11–RQ12 |
+# | M1: Lead & Integration | Mohamed Reyad | 16010224 | 1, 2, 8, 9, RQ1–RQ2 |
+# | M2: Housing data | Ziad Mohamed | 16006210 | 3, 5, RQ3–RQ4 |
+# | M3: Transport data | Mohamed Said | 16009603 | 4, 6, RQ5–RQ6 |
+# | M4: Website logic | Mohamed Nasr | 16003436 | 11, website callbacks, RQ7–RQ8 |
+# | M5: Website visuals & deployment | Eyad Nada | 16003427 | website layout & deployment, RQ9–RQ10 |
+# | M6: Story & documentation | Mazen Osama | 16007545 | 7, 12, 13, 14, RQ11–RQ12 |
 #
-# **Website:** `https://nyc-housing-street-safety-dun.vercel.app` · **Repository:** `https://github.com/BigM3za/nyc-housing-street-safety`
+# **Website:** __WEBSITE__ · **Repository:** https://github.com/BigM3za/nyc-housing-street-safety
 #
 # **Our question in one sentence:** *New York City builds thousands of affordable homes every year. Are these homes being built next to the city's most dangerous streets?*
 #
